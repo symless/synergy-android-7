@@ -3,6 +3,7 @@
 Version .007
 
 -- Fixed keyboard input for android L M N O
+-- Converted to import and build in android studio
 
 
 To install use
