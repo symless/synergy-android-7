@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" android:padding="10px">
+
+	<TextView android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:text="Synergy Client name:"
+               android:id="@+id/clientNameTextView"/>
+
+    <EditText android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:background="@android:drawable/editbox_background"
+              android:text="android"
+              android:layout_below="@id/clientNameTextView"
+              android:id="@+id/clientNameEditText"/>
+	
+	<TextView android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:text="Server IP/Hostname:"
+              android:layout_below="@id/clientNameEditText"
+              android:id="@+id/serverHostTextView"/>
+
+    <EditText android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:background="@android:drawable/editbox_background"
+              android:text="igsarmewmactck"
+              android:layout_below="@id/serverHostTextView"
+              android:id="@+id/serverHostEditText"/>
+
+    <TextView android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:text="Server Port:"
+              android:layout_below="@id/serverHostEditText"
+              android:id="@+id/serverPortTextView"/>
+
+    <EditText android:id="@+id/serverPortEditText"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/serverPortTextView"
+              android:background="@android:drawable/editbox_background"
+              android:inputType="number"
+              android:text="24800" />
+
+    <TextView android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:text="Input device name:"
+              android:layout_below="@+id/serverPortEditText"
+              android:id="@+id/inputDeviceTextView"/>
+
+    <EditText android:layout_width="fill_parent" 
+              android:layout_height="wrap_content" 
+              android:background="@android:drawable/editbox_background"
+              android:text="touchscreen"
+              android:layout_below="@+id/inputDeviceTextView"
+              android:id="@+id/inputDeviceEditText"/>
+
+    <Button android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputDeviceEditText"
+            android:layout_alignParentRight="true"
+            android:text="Connect" 
+            android:id="@+id/connectButton"/>
+    
+<!--    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:id="@android:id/tabhost"-->
+<!--    android:layout_width="fill_parent"-->
+<!--    android:layout_height="fill_parent"-->
+<!--    android:layout_below="@id/test">-->
+<!--    	<LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        android:padding="5dp">-->
+<!--        <TabWidget-->
+<!--            android:id="@android:id/tabs"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--        <FrameLayout-->
+<!--            android:id="@android:id/tabcontent"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="fill_parent"-->
+<!--            android:padding="5dp" />-->
+<!--    </LinearLayout>-->
+<!--</TabHost>-->
+<!--    -->
+    <LinearLayout android:layout_width="fill_parent" 
+                android:layout_height="fill_parent"
+                android:layout_below="@id/connectButton">
+    	
+    	<EditText android:id="@+id/outputEditText"
+    			  android:layout_width="fill_parent" 
+            	  android:layout_height="fill_parent"
+            	  android:background="@android:drawable/editbox_background"/>
+                        
+    
+                
+    </LinearLayout>
+    
+
+    
+</RelativeLayout>
