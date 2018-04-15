@@ -10,3 +10,5 @@ Version .007
 To install use
 
 adb install -g -t ./app/build/outputs/apk/debug/app-debug.apk
+
+Dev Bitcoin Donations: 1595bG7y7CDgBwsmM5w8qK2Dy2ZP6GbfJU
