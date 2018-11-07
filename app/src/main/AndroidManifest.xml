@@ -19,7 +19,6 @@
         </activity>
 
     </application>
-    <uses-sdk android:minSdkVersion="14" />
 
 
-</manifest> 
+</manifest>
