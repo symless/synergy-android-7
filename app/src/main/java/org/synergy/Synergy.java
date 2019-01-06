@@ -102,7 +102,7 @@ public class Synergy extends Activity {
 		});
         
         Log.setLogLevel (Log.Level.INFO);
-        
+		TastyToast.makeText(getApplicationContext(), "Client Starting", TastyToast.LENGTH_LONG, TastyToast.DEFAULT);
         Log.debug ("Client starting....");
 
         try {
