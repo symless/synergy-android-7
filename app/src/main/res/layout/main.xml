@@ -1,66 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent" 
-                android:layout_height="wrap_content" android:padding="10px">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:padding="10px">
 
-	<TextView android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Synergy Client name:"
-               android:id="@+id/clientNameTextView"/>
+    <TextView
+        android:id="@+id/clientNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="Synergy Client name"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
 
-    <EditText android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:background="@android:drawable/editbox_background"
-              android:text="android"
-              android:layout_below="@id/clientNameTextView"
-              android:id="@+id/clientNameEditText"/>
-	
-	<TextView android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Server IP/Hostname:"
-              android:layout_below="@id/clientNameEditText"
-              android:id="@+id/serverHostTextView"/>
+    <EditText
+        android:id="@+id/clientNameEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clientNameTextView"
+        android:layout_marginLeft="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="android" />
 
-    <EditText android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:background="@android:drawable/editbox_background"
-              android:text="igsarmewmactck"
-              android:layout_below="@id/serverHostTextView"
-              android:id="@+id/serverHostEditText"/>
+    <TextView
+        android:id="@+id/serverHostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clientNameEditText"
+        android:layout_marginLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="Server IP/Hostname"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
 
-    <TextView android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Server Port:"
-              android:layout_below="@id/serverHostEditText"
-              android:id="@+id/serverPortTextView"/>
+    <EditText
+        android:id="@+id/serverHostEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/serverHostTextView"
+        android:layout_marginLeft="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="192.168.43.228"
+        android:layout_alignParentRight="true" />
 
-    <EditText android:id="@+id/serverPortEditText"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:layout_below="@id/serverPortTextView"
-              android:background="@android:drawable/editbox_background"
-              android:inputType="number"
-              android:text="24800" />
+    <TextView
+        android:text="Server Port"
+        android:id="@+id/serverPortTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/clientNameTextView"
+        android:layout_alignStart="@+id/clientNameTextView"
+        android:layout_below="@+id/serverHostEditText"
+        android:paddingTop="8dp"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
 
-    <TextView android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:text="Input device name:"
-              android:layout_below="@+id/serverPortEditText"
-              android:id="@+id/inputDeviceTextView"/>
+    <EditText
+        android:id="@+id/serverPortEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/serverPortTextView"
+        android:layout_marginLeft="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="number"
+        android:text="24800"
+        android:layout_alignParentLeft="true" />
 
-    <EditText android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:background="@android:drawable/editbox_background"
-              android:text="touchscreen"
-              android:layout_below="@+id/inputDeviceTextView"
-              android:id="@+id/inputDeviceEditText"/>
+    <TextView
+        android:id="@+id/inputDeviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/clientNameTextView"
+        android:layout_alignStart="@+id/clientNameTextView"
+        android:layout_below="@+id/serverPortEditText"
+        android:layout_marginTop="8dp"
+        android:text="Input device name"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
 
-    <Button android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputDeviceEditText"
-            android:layout_alignParentRight="true"
-            android:text="Connect" 
-            android:id="@+id/connectButton"/>
+    <EditText
+        android:id="@+id/inputDeviceEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/inputDeviceTextView"
+        android:layout_marginLeft="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="touchscreen"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="197dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Connect"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
     
 <!--    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--    android:id="@android:id/tabhost"-->
@@ -84,19 +128,6 @@
 <!--    </LinearLayout>-->
 <!--</TabHost>-->
 <!--    -->
-    <LinearLayout android:layout_width="fill_parent" 
-                android:layout_height="fill_parent"
-                android:layout_below="@id/connectButton">
-    	
-    	<EditText android:id="@+id/outputEditText"
-    			  android:layout_width="fill_parent" 
-            	  android:layout_height="fill_parent"
-            	  android:background="@android:drawable/editbox_background"/>
-                        
-    
-                
-    </LinearLayout>
-    
 
-    
+
 </RelativeLayout>

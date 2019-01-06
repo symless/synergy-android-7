@@ -41,6 +41,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.sdsmdg.tastytoast.TastyToast;
+
 public class Synergy extends Activity {
 	
 	private final static String PROP_clientName = "clientName";
@@ -100,7 +102,7 @@ public class Synergy extends Activity {
 		});
         
         Log.setLogLevel (Log.Level.INFO);
-        
+		TastyToast.makeText(getApplicationContext(), "Client Starting", TastyToast.LENGTH_LONG, TastyToast.DEFAULT);
         Log.debug ("Client starting....");
 
         try {
@@ -145,6 +147,7 @@ public class Synergy extends Activity {
             
 			Client client = new Client (getApplicationContext(), clientName, serverAddress, socketFactory, null, basicScreen);
 			new SynergyConnectTask().execute(client);
+			TastyToast.makeText(getApplicationContext(), "Device Connected", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
 			if (mainLoopThread == null) {
 				mainLoopThread = new MainLoopThread();
@@ -153,7 +156,7 @@ public class Synergy extends Activity {
 			
         } catch (Exception e) {
         	e.printStackTrace();
-        	((EditText) findViewById (R.id.outputEditText)).setText("Connection Failed.");
+			TastyToast.makeText(getApplicationContext(), "Connection Failed", TastyToast.LENGTH_LONG, TastyToast.ERROR);
         }
     }
 }
